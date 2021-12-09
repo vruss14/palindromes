@@ -1,0 +1,23 @@
+{
+  "name": "palindromes",
+  "version": "1.0.0",
+  "description": "A palindrome checker built with JavaScript that tests whether or not a given string is a palindrome.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vruss14/palindromes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vruss14/palindromes/issues"
+  },
+  "homepage": "https://github.com/vruss14/palindromes#readme",
+  "dependencies": {
+    "jest": "^27.4.3"
+  }
+}
