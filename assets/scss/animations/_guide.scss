@@ -1,0 +1,54 @@
+// Animation & webkit animation accounts for different browsers
+
+.guide {
+    position: absolute;
+    width: 10px;
+    height: 99vh;
+    z-index: -1;
+  
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: random(30) + s;
+    -webkit-animation-name: move;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-duration: random(30) + s;
+}
+
+// This mixin creates a unique animation for each of the guides
+// The mixin accepts a name, a from value, and a to value which are supplied through @include (calling the mixin)
+
+@mixin guide-mixin($name, $fromVal, $toVal) {
+    @-webkit-keyframes #{$name} {
+        from { left: $fromVal;     }
+        to   { left: $toVal + vw; }
+    }
+    
+    @keyframes #{$name} {
+        from { left: 0;     }
+        to   { left: $toVal + vw; }
+    }
+}
+
+// Because 20 guides are created with a numbered naming pattern, each one can be given unique properties
+// Each guide has a unique animation duration and animation delay
+// Negative animation delays mean that the animation has already started (this way all the balls don't start on the left)
+
+@for $i from 1 through 20 {
+    .guide-#{$i} {
+      animation-name: move-#{$i};
+      animation-duration: $i * 3 + s;
+      animation-delay: -($i * 2) + s;
+      -webkit-animation-name: move-#{$i};
+      -webkit-animation-duration: $i * 3 + s;
+    }
+}
+
+// Call the mixin for each of the guides; their from and to values are unique based on each iteration
+
+@for $i from 1 through 20 {
+    @include guide-mixin(move-#{$i}, $i * 10, random(100))
+}

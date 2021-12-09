@@ -1,0 +1,89 @@
+body {
+    overflow: hidden;
+}
+
+#submitBtn:hover {
+    background-color: transparent;
+    color: #0dcaf0;
+    outline: 1px solid #0dcaf0;
+    transition: 0.5s ease-in-out;
+}
+
+#animation-stage {
+    position: relative;
+    margin: 1em auto;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+}
+  
+#traveler {
+    position: absolute;
+    width: 10px;
+    height: 99vh;
+    z-index: -1;
+  
+    animation-name: travel;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 15s;
+    -webkit-animation-name: travel;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-duration: 15s;
+}
+  
+#bouncer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #0dcaf0;
+    opacity: 80%;
+    z-index: -1;
+
+
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    -webkit-animation-name: bounce;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 15s;
+
+}
+
+@-webkit-keyframes travel {
+    from { left: 0;     }
+    to   { left: 99vw; }
+}
+
+    
+@keyframes travel {
+    from { left: 0;     }
+    to   { left: 99vw; }
+}
+
+  
+@-webkit-keyframes bounce {
+    from, to  {
+      bottom: 0;
+      -webkit-animation-timing-function: ease-out;
+    }
+    50% {
+      bottom: 100vh - 20px;
+      -webkit-animation-timing-function: ease-in;
+    }
+}
+  
+@keyframes bounce {
+    from, to  {
+      bottom: 0;
+      animation-timing-function: ease-out;
+    }
+    50% {
+      bottom: 99vh;
+      animation-timing-function: ease-in;
+    }
+}  

@@ -1,0 +1,58 @@
+.ball {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: $teal;
+    opacity: 80%;
+    z-index: -1;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 15s;
+}
+
+// This mixin is responsible for giving each ball unique bounce properties
+// A unique value is supplied for where each ball will end up halfway through the animation
+
+@mixin animation-mixin($name, $num) {
+    @-webkit-keyframes #{$name} {
+        from, to  {
+          bottom: 0;
+          -webkit-animation-timing-function: ease-out;
+        }
+        50% {
+          bottom: $num + vh;
+          -webkit-animation-timing-function: ease-in;
+        }
+    }
+    @keyframes #{$name} {
+        from, to  {
+          bottom: 0;
+          animation-timing-function: ease-out;
+        }
+        50% {
+          bottom: $num + vh;
+          animation-timing-function: ease-in;
+        }
+    }
+}
+
+// Depending on the ball, it gets a unique animation-name (so that the mixin can be called separately for each ball)
+// The ball gets a unique, negative animation delay (so that on page load it appears the animation has already started)
+
+@for $i from 1 through 20 {
+  .ball-#{$i} {
+    animation-name: bounce-#{$i};
+    animation-delay: -$i + s;
+    -webkit-animation-name: bounce-#{$i};
+    -webkit-animation-delay: -$i + s;
+  }
+}
+
+// The mixin is called for each of the balls on the page; results in unique movement for each one
+
+@for $i from 1 through 20 {
+    @include animation-mixin(bounce-#{$i}, $i * 10)
+}
+
