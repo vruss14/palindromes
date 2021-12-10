@@ -17,6 +17,10 @@ body {
   background: transparent;
 }
 
+#form-container {
+  padding: 3vw;
+}
+
 .ball {
   position: absolute;
   width: 10px;
@@ -580,12 +584,12 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-duration: 29s;
+  animation-duration: 17s;
   -webkit-animation-name: move;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 28s;
 }
 
 .guide-1 {
@@ -753,7 +757,7 @@ body {
     left: 10;
   }
   to {
-    left: 2vw;
+    left: 32vw;
   }
 }
 @keyframes move-1 {
@@ -761,7 +765,7 @@ body {
     left: 0;
   }
   to {
-    left: 2vw;
+    left: 32vw;
   }
 }
 @-webkit-keyframes move-2 {
@@ -769,7 +773,7 @@ body {
     left: 20;
   }
   to {
-    left: 78vw;
+    left: 94vw;
   }
 }
 @keyframes move-2 {
@@ -777,7 +781,7 @@ body {
     left: 0;
   }
   to {
-    left: 78vw;
+    left: 94vw;
   }
 }
 @-webkit-keyframes move-3 {
@@ -785,7 +789,7 @@ body {
     left: 30;
   }
   to {
-    left: 18vw;
+    left: 86vw;
   }
 }
 @keyframes move-3 {
@@ -793,7 +797,7 @@ body {
     left: 0;
   }
   to {
-    left: 18vw;
+    left: 86vw;
   }
 }
 @-webkit-keyframes move-4 {
@@ -801,7 +805,7 @@ body {
     left: 40;
   }
   to {
-    left: 99vw;
+    left: 23vw;
   }
 }
 @keyframes move-4 {
@@ -809,7 +813,7 @@ body {
     left: 0;
   }
   to {
-    left: 99vw;
+    left: 23vw;
   }
 }
 @-webkit-keyframes move-5 {
@@ -817,7 +821,7 @@ body {
     left: 50;
   }
   to {
-    left: 66vw;
+    left: 17vw;
   }
 }
 @keyframes move-5 {
@@ -825,7 +829,7 @@ body {
     left: 0;
   }
   to {
-    left: 66vw;
+    left: 17vw;
   }
 }
 @-webkit-keyframes move-6 {
@@ -833,7 +837,7 @@ body {
     left: 60;
   }
   to {
-    left: 68vw;
+    left: 15vw;
   }
 }
 @keyframes move-6 {
@@ -841,7 +845,7 @@ body {
     left: 0;
   }
   to {
-    left: 68vw;
+    left: 15vw;
   }
 }
 @-webkit-keyframes move-7 {
@@ -849,7 +853,7 @@ body {
     left: 70;
   }
   to {
-    left: 19vw;
+    left: 79vw;
   }
 }
 @keyframes move-7 {
@@ -857,7 +861,7 @@ body {
     left: 0;
   }
   to {
-    left: 19vw;
+    left: 79vw;
   }
 }
 @-webkit-keyframes move-8 {
@@ -865,7 +869,7 @@ body {
     left: 80;
   }
   to {
-    left: 22vw;
+    left: 24vw;
   }
 }
 @keyframes move-8 {
@@ -873,7 +877,7 @@ body {
     left: 0;
   }
   to {
-    left: 22vw;
+    left: 24vw;
   }
 }
 @-webkit-keyframes move-9 {
@@ -881,7 +885,7 @@ body {
     left: 90;
   }
   to {
-    left: 71vw;
+    left: 67vw;
   }
 }
 @keyframes move-9 {
@@ -889,7 +893,7 @@ body {
     left: 0;
   }
   to {
-    left: 71vw;
+    left: 67vw;
   }
 }
 @-webkit-keyframes move-10 {
@@ -897,7 +901,7 @@ body {
     left: 100;
   }
   to {
-    left: 17vw;
+    left: 10vw;
   }
 }
 @keyframes move-10 {
@@ -905,7 +909,7 @@ body {
     left: 0;
   }
   to {
-    left: 17vw;
+    left: 10vw;
   }
 }
 @-webkit-keyframes move-11 {
@@ -913,7 +917,7 @@ body {
     left: 110;
   }
   to {
-    left: 46vw;
+    left: 86vw;
   }
 }
 @keyframes move-11 {
@@ -921,7 +925,7 @@ body {
     left: 0;
   }
   to {
-    left: 46vw;
+    left: 86vw;
   }
 }
 @-webkit-keyframes move-12 {
@@ -929,7 +933,7 @@ body {
     left: 120;
   }
   to {
-    left: 96vw;
+    left: 44vw;
   }
 }
 @keyframes move-12 {
@@ -937,7 +941,7 @@ body {
     left: 0;
   }
   to {
-    left: 96vw;
+    left: 44vw;
   }
 }
 @-webkit-keyframes move-13 {
@@ -945,7 +949,7 @@ body {
     left: 130;
   }
   to {
-    left: 61vw;
+    left: 44vw;
   }
 }
 @keyframes move-13 {
@@ -953,7 +957,7 @@ body {
     left: 0;
   }
   to {
-    left: 61vw;
+    left: 44vw;
   }
 }
 @-webkit-keyframes move-14 {
@@ -961,7 +965,7 @@ body {
     left: 140;
   }
   to {
-    left: 65vw;
+    left: 15vw;
   }
 }
 @keyframes move-14 {
@@ -969,7 +973,7 @@ body {
     left: 0;
   }
   to {
-    left: 65vw;
+    left: 15vw;
   }
 }
 @-webkit-keyframes move-15 {
@@ -977,7 +981,7 @@ body {
     left: 150;
   }
   to {
-    left: 61vw;
+    left: 62vw;
   }
 }
 @keyframes move-15 {
@@ -985,7 +989,7 @@ body {
     left: 0;
   }
   to {
-    left: 61vw;
+    left: 62vw;
   }
 }
 @-webkit-keyframes move-16 {
@@ -993,7 +997,7 @@ body {
     left: 160;
   }
   to {
-    left: 74vw;
+    left: 89vw;
   }
 }
 @keyframes move-16 {
@@ -1001,7 +1005,7 @@ body {
     left: 0;
   }
   to {
-    left: 74vw;
+    left: 89vw;
   }
 }
 @-webkit-keyframes move-17 {
@@ -1009,7 +1013,7 @@ body {
     left: 170;
   }
   to {
-    left: 34vw;
+    left: 67vw;
   }
 }
 @keyframes move-17 {
@@ -1017,7 +1021,7 @@ body {
     left: 0;
   }
   to {
-    left: 34vw;
+    left: 67vw;
   }
 }
 @-webkit-keyframes move-18 {
@@ -1025,7 +1029,7 @@ body {
     left: 180;
   }
   to {
-    left: 77vw;
+    left: 47vw;
   }
 }
 @keyframes move-18 {
@@ -1033,7 +1037,7 @@ body {
     left: 0;
   }
   to {
-    left: 77vw;
+    left: 47vw;
   }
 }
 @-webkit-keyframes move-19 {
@@ -1041,7 +1045,7 @@ body {
     left: 190;
   }
   to {
-    left: 34vw;
+    left: 54vw;
   }
 }
 @keyframes move-19 {
@@ -1049,7 +1053,7 @@ body {
     left: 0;
   }
   to {
-    left: 34vw;
+    left: 54vw;
   }
 }
 @-webkit-keyframes move-20 {
@@ -1057,7 +1061,7 @@ body {
     left: 200;
   }
   to {
-    left: 16vw;
+    left: 40vw;
   }
 }
 @keyframes move-20 {
@@ -1065,7 +1069,7 @@ body {
     left: 0;
   }
   to {
-    left: 16vw;
+    left: 40vw;
   }
 }
 
