@@ -4,7 +4,12 @@
   "description": "A palindrome checker built with JavaScript that tests whether or not a given string is a palindrome.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --env=jsdom"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,7 +23,11 @@
   },
   "homepage": "https://github.com/vruss14/palindromes#readme",
   "dependencies": {
-    "jest": "^27.4.3",
     "sass": "^1.44.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.4.4",
+    "jest": "^27.4.4"
   }
 }

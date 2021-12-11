@@ -1,12 +1,19 @@
-let palindromeForm = document.getElementById('palindrome-form');
-
-palindromeForm.addEventListener('submit', function(event) {
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('palindrome-form').addEventListener('submit', function(event) {
     let userInput = document.getElementById('userInput').value;
     event.preventDefault();
-    palindrome(userInput);
-})
 
-function palindrome(str) {
+    if(palindrome(userInput)) {
+        document.getElementById('palindrome-result').textContent = `${userInput} is a palindrome.`;
+        document.getElementById('userInput').value = '';
+        return;
+    }
+    document.getElementById('palindrome-result').textContent = `${userInput} is not a palindrome.`;
+    document.getElementById('userInput').value = '';
+  })
+});
+
+export const palindrome = (str) => {
     // Make a copy of the original string; don't modify/alter the original
     let inputStr = str;
   
@@ -31,13 +38,7 @@ function palindrome(str) {
     let reversedStr = newArr.reverse().join('').toLowerCase();
 
     if(editedStr === reversedStr) {
-        document.getElementById('palindrome-result').textContent = `${inputStr} is a palindrome.`;
-        document.getElementById('userInput').value = '';
       return true;
-    } else {
-        document.getElementById('palindrome-result').textContent = `${inputStr} is not a palindrome.`;
-        document.getElementById('userInput').value = '';
-      return false;
     }
-
+    return false;
 }
